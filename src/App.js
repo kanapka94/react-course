@@ -1,24 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
 
+import Person from './Person/Person'
+
 function App() {
+  const [people, setPeople] = useState([
+    { name: 'Adam', age: Math.floor(Math.random() * 80) },
+    { name: 'Ola', age: Math.floor(Math.random() * 25) }
+  ])
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Hi!</h1>
+      <button>Switch Name</button>
+      <Person name={ people[0].name } age={ people[0].age }>
+        What I can do here?
+      </Person>
     </div>
   );
 }
