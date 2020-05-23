@@ -6,6 +6,7 @@ const StyledUserInfo = styled.div`
     color: greenyellow;
     font-weight: 600;
     font-size: 20px;
+    ${props => props.underline && 'text-decoration: underline;'}
 `
 class UserInfo extends Component {
     state = {
@@ -24,7 +25,7 @@ class UserInfo extends Component {
         }
 
         return (
-            <StyledUserInfo>
+            <StyledUserInfo underline>
                 User Info
             </StyledUserInfo>
         )
