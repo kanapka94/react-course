@@ -4,6 +4,7 @@ import './App.css'
 import ButtonToggle from './components/ButtonToggle'
 import UserInput from './components/User/UserInput'
 import UserOutput from './components/User/UserOutput'
+import UserInfo from './components/classes/UserInfo'
 
 function App() {
   const [visible, setVisible] = useState(false)
@@ -56,6 +57,7 @@ function App() {
   return (
     <div className="App">
       <h1>Hello Friends!</h1>
+      <UserInfo/>
       <ButtonToggle click={ toggleOutput }>Toggle Users</ButtonToggle>
       { output }
     </div>
