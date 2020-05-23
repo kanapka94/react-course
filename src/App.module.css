@@ -3,6 +3,11 @@
   padding: 20px 50px;
 }
 
+.Header {
+  font-size: 72px;
+  text-align: center;
+}
+
 .bold {
   font-weight: bold;
 }

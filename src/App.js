@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import './App.css'
+import classes from './App.module.css'
 
 import ButtonToggle from './components/ButtonToggle'
 import UserInput from './components/User/UserInput'
@@ -56,7 +56,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Hello Friends!</h1>
+      <h1 className={ classes.Header }>Hello Friends!</h1>
       <UserInfo/>
       <ButtonToggle click={ toggleOutput }>Toggle Users</ButtonToggle>
       { output }
