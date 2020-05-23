@@ -1,5 +1,12 @@
 import React, { Component } from 'react'
+import styled from 'styled-components'
 
+const StyledUserInfo = styled.div`
+    margin: 10px;
+    color: greenyellow;
+    font-weight: 600;
+    font-size: 20px;
+`
 class UserInfo extends Component {
     state = {
         name: 'Adam'
@@ -10,10 +17,6 @@ class UserInfo extends Component {
     }
 
     render () {
-        const style = {
-            color: 'yellow'
-        }
-
         const classes = []
 
         if (this.props.bold) {
@@ -21,7 +24,9 @@ class UserInfo extends Component {
         }
 
         return (
-            <div style={ style } className={ classes.join(' ') }>User Info</div>
+            <StyledUserInfo>
+                User Info
+            </StyledUserInfo>
         )
     }
 }
