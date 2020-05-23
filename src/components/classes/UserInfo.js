@@ -10,6 +10,10 @@ class UserInfo extends Component {
     }
 
     render () {
+        const style = {
+            color: 'yellow'
+        }
+
         const classes = []
 
         if (this.props.bold) {
@@ -17,7 +21,7 @@ class UserInfo extends Component {
         }
 
         return (
-            <div className={ classes.join(' ') }>User Info</div>
+            <div style={ style } className={ classes.join(' ') }>User Info</div>
         )
     }
 }
