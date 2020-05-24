@@ -1,13 +1,15 @@
-import React from 'react'
+import React, { Component } from 'react'
 import classes from './App.module.scss'
 
-function App() {
+class App extends Component {
 
-  return (
-    <div className="App">
-      <h1 className={ classes.Header }>Hello Friends!</h1>
-    </div>
-  );
+  render () {
+    return (
+      <div className="App">
+        <h1 className={ classes.Header }>Hello Friends!</h1>
+      </div>
+    )
+  }
 }
 
 export default App;
