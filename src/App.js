@@ -2,9 +2,10 @@ import React, { useState } from 'react'
 import classes from './App.module.css'
 
 import ButtonToggle from './components/ButtonToggle'
-import UserInput from './components/User/UserInput'
+import Person from './components/Person/Person'
 import UserOutput from './components/User/UserOutput'
 import UserInfo from './components/classes/UserInfo'
+import ErrorBoundary from './components/ErrorBoundary/ErrorBoundary'
 
 function App() {
   const [visible, setVisible] = useState(false)
@@ -57,6 +58,11 @@ function App() {
   return (
     <div className="App">
       <h1 className={ classes.Header }>Hello Friends!</h1>
+      <br/>
+      <ErrorBoundary>
+        <Person name="Adam" age="5"/>
+      </ErrorBoundary>
+      <br/>
       <UserInfo/>
       <ButtonToggle click={ toggleOutput }>Toggle Users</ButtonToggle>
       { output }

@@ -1,13 +1,18 @@
 import React from 'react'
 
 const Person = (props) => {
+    const random = Math.random()
+
+    if (random > 0.7) {
+        throw new Error('Coś tam bla bal')
+    }
+
     return (
         <div>
-            <p onClick={ props.click }>
+            <p>
                 I'm a { props.name } and I'm { props.age } years old!
             </p>
             <p>{ props.children }</p>
-            <input type="text" onChange={ props.change } value={ props.name }/>
         </div>
     )
 }
